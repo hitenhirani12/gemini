@@ -4,7 +4,8 @@ import React, { useContext } from "react";
 import "./Main.css";
 import { Context } from "../../context/context";
 import { assets } from "../../assets/assets";
-
+import ShinyText from "./ShinyText";
+import BlurText from "./BlurText";
 const Main = ({ userName = "Dude" }) => {
   const {
     onSent,
@@ -19,7 +20,14 @@ const Main = ({ userName = "Dude" }) => {
   return (
     <div className="main">
       <div className="nav">
-        <p>Gemini</p>
+        <p>
+          <ShinyText
+            text="Gemini"
+            disabled={false}
+            speed={3}
+            className="custom-class"
+          />
+        </p>
         <img src={assets.user_icon} alt="User Icon" className="user-icon" />
       </div>
 
@@ -27,10 +35,26 @@ const Main = ({ userName = "Dude" }) => {
         {!showResult ? (
           <>
             <div className="greet">
-              <p>
-                <span>Hello, {userName}</span>
-              </p>
-              <p>How Can I Help Today?</p>
+              <BlurText
+                text="Hello Dude ,"
+                delay={150}
+                animateBy="words"
+                direction="top"
+                onAnimationComplete={() =>
+                  console.log("Blur animation finished")
+                }
+                className="text-2xl mb-8"
+              />
+              <BlurText
+                text="How Can I Help You Today !"
+                delay={150}
+                animateBy="words"
+                direction="top"
+                onAnimationComplete={() =>
+                  console.log("Blur animation finished")
+                }
+                className="text-2xl mb-8"
+              />
             </div>
 
             <div className="cards">

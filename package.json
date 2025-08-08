@@ -12,6 +12,7 @@
   "dependencies": {
     "@google/genai": "^1.10.0",
     "@google/generative-ai": "^0.24.1",
+    "bootstrap": "^5.3.7",
     "framer-motion": "^12.23.12",
     "gsap": "^3.13.0",
     "mime": "^4.0.7",

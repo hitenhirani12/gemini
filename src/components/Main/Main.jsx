@@ -6,6 +6,7 @@ import { Context } from "../../context/context";
 import { assets } from "../../assets/assets";
 import ShinyText from "./ShinyText";
 import BlurText from "./BlurText";
+import SplashCursor from './SplashCursor'
 const Main = ({ userName = "Dude" }) => {
   const {
     onSent,
